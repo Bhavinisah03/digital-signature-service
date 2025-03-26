@@ -1,8 +1,6 @@
-from fastapi import FastAPI, Depends
-from pydantic import BaseModel
-from sqlalchemy import create_engine, Column, Integer, String
-from sqlalchemy.ext.declarative import declarative_base
-from sqlalchemy.orm import sessionmaker, Session
+from sqlalchemy import Column, Integer, String
+from sqlalchemy.schema import PrimaryKeyConstraint
+from dao.db_connection import Base
 
 # ✅ Define Existing Table Structure (must match your existing table)
 class SenderMessage(Base):
