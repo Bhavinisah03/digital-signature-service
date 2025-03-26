@@ -62,7 +62,7 @@ def sign_message(request: SignMessageRequest, user: dict = Depends(get_current_u
         author_message = AuthorMessage(author_id=author_id, private_key_id=author_id,
             message=request.message, signature=encoded_signature)
         dao.author_messages_dao.add_author_message(author_message, db)
-        return {"message": request.message, "signature": encoded_signature, "user": request.user}
+        return {"message": request.message, "signature": encoded_signature, "user": email}
     except HTTPException as e:
         traceback.print_exc()
         raise e
