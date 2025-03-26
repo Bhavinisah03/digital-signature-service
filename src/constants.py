@@ -3,6 +3,8 @@ from utils.rsa_util import get_private_keys
 
 users = [User(email="bhavini.1@gmail.com", id=1), User(email="bhavini.2@gmail.com", id=2)]
 
+SUPPORTED_USER_TYPES = ["Admin", "Author"]
+
 # Generate RSA key pair
 public_exponent_num = 65537
 
