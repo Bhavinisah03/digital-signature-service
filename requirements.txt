@@ -2,3 +2,6 @@ fastapi
 uvicorn
 pydantic
 cryptography
+python-jose
+sqlalchemy
+bcrypt
